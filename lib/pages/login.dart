@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tugas4/pages/landingpage.dart';
+import 'package:tugas4/routes/routes.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -70,14 +72,14 @@ class _LoginPageState extends State<LoginPage> {
                   ElevatedButton(
                     onPressed: () {
                       String text = "";
-                      if (user == '123190033' && pass == 'hakim') {
+                      if (user == '123190033' ||
+                          user == '123200005' && pass == 'hakim' ||
+                          pass == 'anis') {
                         setState(() {
                           text = 'Login Success';
                           isLoginSuccess = true;
                         });
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                          return LandingPage();
-                        }));
+                        Navigator.of(context).pushNamed('/home');
                       } else {
                         setState(() {
                           text = 'Login Failed';

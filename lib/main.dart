@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: AppPage.getnavbar(),
+    initialRoute: AppPage.getlogin(),
     getPages: AppPage.routes,
     theme: ThemeData(primarySwatch: Colors.amber),
     );
